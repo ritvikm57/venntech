@@ -7,27 +7,27 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="container-venn flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center text-white font-bold text-lg">
+        <Link href="/" className="flex items-center space-x-3 group">
+          <div className="w-12 h-12 bg-gradient-to-br from-orange to-orange/80 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-sm group-hover:shadow-md transition-shadow">
             V
           </div>
-          <div className="hidden md:block">
-            <p className="text-navy font-bold text-sm md:text-base">Venntech</p>
-            <p className="text-xs text-steel-grey">Advanced Composites & HVAC</p>
+          <div className="hidden sm:block">
+            <p className="text-navy font-bold text-base">Venntech</p>
+            <p className="text-xs text-slate-600">Advanced Composites & HVAC</p>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-8">
-          <Link href="/about" className="nav-link">About</Link>
-          <Link href="/products" className="nav-link">Products</Link>
-          <Link href="/industries" className="nav-link">Industries</Link>
-          <Link href="/capabilities" className="nav-link">Capabilities</Link>
-          <Link href="/global-presence" className="nav-link">Global Presence</Link>
-          <Link href="/contact" className="nav-link">Contact</Link>
+        <div className="hidden lg:flex items-center space-x-1">
+          <Link href="/about" className="nav-link px-4 py-2 rounded-lg hover:bg-gray-100">About</Link>
+          <Link href="/products" className="nav-link px-4 py-2 rounded-lg hover:bg-gray-100">Products</Link>
+          <Link href="/industries" className="nav-link px-4 py-2 rounded-lg hover:bg-gray-100">Industries</Link>
+          <Link href="/capabilities" className="nav-link px-4 py-2 rounded-lg hover:bg-gray-100">Capabilities</Link>
+          <Link href="/global-presence" className="nav-link px-4 py-2 rounded-lg hover:bg-gray-100">Global Presence</Link>
+          <Link href="/contact" className="nav-link px-4 py-2 rounded-lg hover:bg-gray-100">Contact</Link>
         </div>
 
         {/* CTA Button */}
@@ -39,7 +39,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 text-navy"
+          className="lg:hidden p-2 text-navy hover:bg-gray-100 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -51,16 +51,16 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-slate-200 py-4">
-          <div className="container-venn flex flex-col space-y-4">
-            <Link href="/about" className="nav-link block py-2" onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <Link href="/products" className="nav-link block py-2" onClick={() => setMobileMenuOpen(false)}>Products</Link>
-            <Link href="/industries" className="nav-link block py-2" onClick={() => setMobileMenuOpen(false)}>Industries</Link>
-            <Link href="/capabilities" className="nav-link block py-2" onClick={() => setMobileMenuOpen(false)}>Capabilities</Link>
-            <Link href="/global-presence" className="nav-link block py-2" onClick={() => setMobileMenuOpen(false)}>Global Presence</Link>
-            <Link href="/contact" className="nav-link block py-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-            <hr className="my-2" />
-            <Link href="/contact" className="btn-primary block text-center py-3" onClick={() => setMobileMenuOpen(false)}>
+        <div className="lg:hidden bg-white border-t border-gray-200 py-4">
+          <div className="container-venn flex flex-col space-y-1">
+            <Link href="/about" className="nav-link block px-4 py-3 rounded-lg hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>About</Link>
+            <Link href="/products" className="nav-link block px-4 py-3 rounded-lg hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Products</Link>
+            <Link href="/industries" className="nav-link block px-4 py-3 rounded-lg hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Industries</Link>
+            <Link href="/capabilities" className="nav-link block px-4 py-3 rounded-lg hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Capabilities</Link>
+            <Link href="/global-presence" className="nav-link block px-4 py-3 rounded-lg hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Global Presence</Link>
+            <Link href="/contact" className="nav-link block px-4 py-3 rounded-lg hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            <hr className="my-2 border-t border-gray-200" />
+            <Link href="/contact" className="btn-primary block text-center py-3 mx-2" onClick={() => setMobileMenuOpen(false)}>
               Get Quote
             </Link>
           </div>

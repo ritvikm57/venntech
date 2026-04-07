@@ -1,67 +1,75 @@
 @import "tailwindcss";
 
-/* Venntech Color System */
+/* Venntech Color System - Professional Light Mode */
 @layer base {
   :root {
     --color-navy: #0A1F44;
-    --color-steel-grey: #4A5568;
+    --color-navy-light: #1a3a52;
+    --color-steel-dark: #374151;
+    --color-steel-light: #6B7280;
     --color-white: #FFFFFF;
+    --color-off-white: #F9FAFB;
+    --color-light-grey: #F3F4F6;
+    --color-border: #E5E7EB;
     --color-teal: #0E7490;
     --color-orange: #EA580C;
-    --color-light-grey: #F7F8FA;
-    --color-border-grey: #E2E8F0;
   }
 
-  /* Typography */
-  @font-face {
-    font-family: 'Inter';
-    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-  }
+  /* Typography - Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap');
 
-  @font-face {
-    font-family: 'Barlow';
-    src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap');
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
     @apply bg-white text-slate-900 font-sans;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--color-navy);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Barlow', 'Inter', sans-serif;
+    font-family: 'Barlow Condensed', 'Barlow', sans-serif;
     @apply font-bold leading-tight;
+    color: #0A1F44;
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
+    @apply text-5xl md:text-6xl lg:text-7xl;
+    letter-spacing: -0.02em;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    @apply text-4xl md:text-5xl;
+    letter-spacing: -0.01em;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl;
+    @apply text-2xl md:text-3xl font-semibold;
   }
 
   h4 {
-    @apply text-xl md:text-2xl;
+    @apply text-xl md:text-2xl font-semibold;
   }
 
   p {
-    @apply text-base md:text-lg leading-relaxed;
+    @apply text-base md:text-lg leading-relaxed text-slate-700;
+  }
+
+  a {
+    @apply transition-colors duration-300;
   }
 }
 
 /* Utility Classes */
 @layer components {
   .container-venn {
-    @apply max-w-7xl mx-auto px-4 md:px-8 lg:px-12;
+    @apply max-w-7xl mx-auto px-6 md:px-8;
   }
 
+  /* Button Styles */
   .btn-primary {
-    @apply inline-block px-6 md:px-8 py-3 md:py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-200;
+    @apply inline-block px-6 md:px-8 py-3 md:py-4 text-white font-bold uppercase text-sm tracking-wide rounded-lg transition-all duration-300;
     background-color: #EA580C;
   }
 
@@ -70,30 +78,63 @@
   }
 
   .btn-secondary {
-    @apply inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-slate-900 text-slate-900 font-semibold rounded-lg hover:bg-slate-50 transition-colors duration-200;
+    @apply inline-block px-6 md:px-8 py-3 md:py-4 border-2 font-bold uppercase text-sm tracking-wide rounded-lg transition-all duration-300;
+    border-color: #0A1F44;
+    color: #0A1F44;
+  }
+
+  .btn-secondary:hover {
+    background-color: #0A1F44;
+    color: white;
   }
 
   .btn-outline-teal {
-    @apply inline-block px-6 md:px-8 py-3 md:py-4 border-2 text-slate-900 font-semibold rounded-lg hover:bg-teal-50 transition-colors duration-200;
+    @apply inline-block px-6 md:px-8 py-3 md:py-4 border-2 font-bold uppercase text-sm tracking-wide rounded-lg transition-all duration-300;
     border-color: #0E7490;
     color: #0E7490;
   }
 
-  .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
+  .btn-outline-teal:hover {
+    background-color: #0E7490;
+    color: white;
   }
 
+  /* Sections */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .section-padding-lg {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  /* Grids */
   .grid-industries {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
   }
 
   .grid-products {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10;
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
   }
 
+  /* Cards */
+  .card-base {
+    @apply bg-white rounded-lg border transition-all duration-300;
+    border-color: #E5E7EB;
+  }
+
+  .card-base:hover {
+    border-color: #0E7490;
+    box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1);
+  }
+
+  .card-shadow {
+    @apply rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 bg-white;
+  }
+
+  /* Images */
   .image-placeholder {
-    @apply w-full bg-slate-600 rounded-lg flex items-center justify-center text-white text-center;
-    background-color: #4A5568;
+    @apply w-full bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg flex items-center justify-center text-gray-600 text-center font-medium;
   }
 
   .image-placeholder-hero {
@@ -108,31 +149,29 @@
     aspect-ratio: 3 / 2;
   }
 
+  /* Navigation */
   .nav-link {
-    @apply text-slate-700 font-medium hover:text-teal-600 transition-colors duration-200 text-sm md:text-base;
+    @apply font-medium transition-colors duration-300 text-sm md:text-base;
+    color: #0A1F44;
   }
 
+  .nav-link:hover {
+    color: #0E7490;
+  }
+
+  /* Stats */
   .stat-item {
     @apply text-center md:text-left;
   }
 
   .stat-number {
-    @apply text-3xl md:text-4xl font-bold text-orange-600;
+    @apply text-3xl md:text-4xl font-bold;
     color: #EA580C;
   }
 
   .stat-label {
-    @apply text-slate-700 font-medium mt-2;
+    @apply text-slate-600 font-medium mt-2 text-sm md:text-base;
   }
-
-  .card-shadow {
-    @apply rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300;
-  }
-}
-
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Animations */

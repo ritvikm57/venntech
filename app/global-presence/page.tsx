@@ -68,25 +68,33 @@ export default function GlobalPresence() {
   return (
     <div className="w-full">
       {/* Hero */}
-      <section className="bg-navy text-white section-padding">
+      <section className="bg-white section-padding-lg border-b border-gray-200">
         <div className="container-venn">
-          <h1 className="text-white mb-6">Global Presence & Export Vision</h1>
-          <p className="text-xl text-slate-200 max-w-3xl">
+          <div className="inline-block mb-6 px-4 py-2 bg-teal/10 rounded-full">
+            <p className="text-teal font-bold text-sm uppercase tracking-wide">Worldwide Reach</p>
+          </div>
+          <h1 className="text-navy mb-6">Global Presence & Export Vision</h1>
+          <p className="text-xl text-slate-700 max-w-3xl leading-relaxed">
             Venntech is expanding globally, serving international markets with certified exports and world-class engineering solutions.
           </p>
         </div>
       </section>
 
       {/* Current Presence */}
-      <section className="bg-white section-padding border-b border-slate-200">
+      <section className="bg-gray-50 section-padding border-b border-gray-200">
         <div className="container-venn">
-          <h2 className="text-center text-navy mb-12">Our Global Footprint</h2>
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-orange/10 rounded-full">
+              <p className="text-orange font-bold text-sm uppercase tracking-wide">Presence</p>
+            </div>
+            <h2 className="text-navy">Our Global Footprint</h2>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             <div>
               <div className="space-y-6">
                 {regions.map((item, idx) => (
-                  <div key={idx} className="card-shadow border border-slate-200 p-6 rounded-lg">
-                    <h3 className="text-navy font-bold mb-2">{item.region}</h3>
+                  <div key={idx} className="card-base p-6 rounded-lg">
+                    <h3 className="text-navy font-bold mb-3">{item.region}</h3>
                     <div className="flex flex-wrap gap-2 mb-3">
                       {item.countries.map((country, countryIdx) => (
                         <span key={countryIdx} className="inline-block px-3 py-1 bg-teal text-white text-xs font-semibold rounded-full">
@@ -94,7 +102,7 @@ export default function GlobalPresence() {
                         </span>
                       ))}
                     </div>
-                    <p className="text-steel-grey text-sm">{item.focus}</p>
+                    <p className="text-slate-700 text-sm">{item.focus}</p>
                   </div>
                 ))}
               </div>
@@ -105,8 +113,8 @@ export default function GlobalPresence() {
           </div>
 
           {/* Map Placeholder Note */}
-          <div className="bg-light-grey rounded-lg border border-slate-200 p-8 text-center">
-            <p className="text-steel-grey text-sm">Interactive world map showing Venntech's global reach and distribution network will be displayed here</p>
+          <div className="card-base rounded-lg p-8 text-center">
+            <p className="text-slate-700 text-sm">Interactive world map showing Venntech's global reach and distribution network will be displayed here</p>
           </div>
         </div>
       </section>

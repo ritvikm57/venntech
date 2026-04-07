@@ -71,31 +71,37 @@ export default function Products() {
   return (
     <div className="w-full">
       {/* Hero */}
-      <section className="bg-navy text-white section-padding">
+      <section className="bg-white section-padding-lg border-b border-gray-200">
         <div className="container-venn">
-          <h1 className="text-white mb-6">Our Products</h1>
-          <p className="text-xl text-slate-200 max-w-3xl">
+          <div className="inline-block mb-6 px-4 py-2 bg-orange/10 rounded-full">
+            <p className="text-orange font-bold text-sm uppercase tracking-wide">Our Portfolio</p>
+          </div>
+          <h1 className="text-navy mb-6">Our Products</h1>
+          <p className="text-xl text-slate-700 max-w-3xl leading-relaxed">
             Engineered composite and HVAC systems designed for defence-grade reliability and global industrial standards.
           </p>
         </div>
       </section>
 
       {/* Composite Systems */}
-      <section className="bg-white section-padding border-b border-slate-200" id="composite">
+      <section className="bg-gray-50 section-padding border-b border-gray-200" id="composite">
         <div className="container-venn">
           <div className="mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-teal/10 rounded-full">
+              <p className="text-teal font-bold text-sm uppercase tracking-wide">Composite Solutions</p>
+            </div>
             <h2 className="text-navy mb-4">Composite Systems</h2>
-            <p className="text-steel-grey text-lg max-w-2xl">
+            <p className="text-slate-700 text-lg max-w-2xl">
               Advanced fibre-reinforced plastic (FRP) components engineered for corrosive and demanding environments across defence, aerospace, and industrial sectors.
             </p>
           </div>
           <div className="grid-products">
             {compositeProducts.map((product) => (
-              <div key={product.id} className="card-shadow border border-slate-200 overflow-hidden transition-all hover:shadow-lg">
+              <div key={product.id} className="card-base overflow-hidden hover:shadow-lg transition-all">
                 <ImagePlaceholder type="card" />
                 <div className="p-6">
                   <h3 className="text-navy font-bold mb-3">{product.name}</h3>
-                  <p className="text-steel-grey text-sm mb-4">{product.description}</p>
+                  <p className="text-slate-700 text-sm mb-4">{product.description}</p>
                   <div className="mb-6 space-y-2">
                     {product.specs.map((spec, idx) => (
                       <div key={idx} className="flex items-center space-x-2 text-sm">
@@ -120,21 +126,24 @@ export default function Products() {
       </section>
 
       {/* HVAC Systems */}
-      <section className="bg-light-grey section-padding border-b border-slate-200" id="hvac">
+      <section className="bg-white section-padding border-b border-gray-200" id="hvac">
         <div className="container-venn">
           <div className="mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-orange/10 rounded-full">
+              <p className="text-orange font-bold text-sm uppercase tracking-wide">HVAC Solutions</p>
+            </div>
             <h2 className="text-navy mb-4">HVAC Metal Systems</h2>
-            <p className="text-steel-grey text-lg max-w-2xl">
+            <p className="text-slate-700 text-lg max-w-2xl">
               Precision-engineered air treatment, cooling, and filtration systems built for industrial and defence applications with uncompromising reliability.
             </p>
           </div>
           <div className="grid-products">
             {hvacProducts.map((product) => (
-              <div key={product.id} className="card-shadow bg-white border border-slate-200 overflow-hidden transition-all hover:shadow-lg">
+              <div key={product.id} className="card-base overflow-hidden hover:shadow-lg transition-all">
                 <ImagePlaceholder type="card" />
                 <div className="p-6">
                   <h3 className="text-navy font-bold mb-3">{product.name}</h3>
-                  <p className="text-steel-grey text-sm mb-4">{product.description}</p>
+                  <p className="text-slate-700 text-sm mb-4">{product.description}</p>
                   <div className="mb-6 space-y-2">
                     {product.specs.map((spec, idx) => (
                       <div key={idx} className="flex items-center space-x-2 text-sm">
@@ -159,12 +168,12 @@ export default function Products() {
       </section>
 
       {/* Custom Solutions */}
-      <section className="bg-white section-padding border-b border-slate-200">
+      <section className="bg-gray-50 section-padding border-b border-gray-200">
         <div className="container-venn">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-navy mb-6">Custom Engineering Solutions</h2>
-              <p className="text-steel-grey text-lg leading-relaxed mb-6">
+              <p className="text-slate-700 text-lg leading-relaxed mb-6">
                 Not finding the exact solution? Our engineering team specializes in designing and manufacturing custom composite and HVAC systems tailored to your specific requirements and application challenges.
               </p>
               <ul className="space-y-4 mb-8">
@@ -172,21 +181,21 @@ export default function Products() {
                   <span className="text-teal text-2xl flex-shrink-0">✓</span>
                   <div>
                     <p className="text-slate-900 font-semibold">Design & Development</p>
-                    <p className="text-steel-grey text-sm">CAD modeling, FEA analysis, and prototype validation</p>
+                    <p className="text-slate-700 text-sm">CAD modeling, FEA analysis, and prototype validation</p>
                   </div>
                 </li>
                 <li className="flex items-start space-x-3">
                   <span className="text-teal text-2xl flex-shrink-0">✓</span>
                   <div>
                     <p className="text-slate-900 font-semibold">Material Selection</p>
-                    <p className="text-steel-grey text-sm">Expert guidance on composites, metals, and coatings for your environment</p>
+                    <p className="text-slate-700 text-sm">Expert guidance on composites, metals, and coatings for your environment</p>
                   </div>
                 </li>
                 <li className="flex items-start space-x-3">
                   <span className="text-teal text-2xl flex-shrink-0">✓</span>
                   <div>
                     <p className="text-slate-900 font-semibold">Testing & Certification</p>
-                    <p className="text-steel-grey text-sm">Full compliance testing and documentation for defence and aerospace standards</p>
+                    <p className="text-slate-700 text-sm">Full compliance testing and documentation for defence and aerospace standards</p>
                   </div>
                 </li>
               </ul>
@@ -202,32 +211,37 @@ export default function Products() {
       </section>
 
       {/* Datasheets & Technical Resources */}
-      <section className="bg-light-grey section-padding border-b border-slate-200">
+      <section className="bg-white section-padding border-b border-gray-200">
         <div className="container-venn">
-          <h2 className="text-center text-navy mb-12">Technical Resources</h2>
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-teal/10 rounded-full">
+              <p className="text-teal font-bold text-sm uppercase tracking-wide">Resources</p>
+            </div>
+            <h2 className="text-navy">Technical Resources</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="card-shadow bg-white p-6 border border-slate-200 text-center">
+            <div className="card-base p-6 text-center hover:shadow-lg">
               <div className="text-4xl mb-3">📄</div>
               <h3 className="text-navy font-bold mb-2">Product Datasheets</h3>
-              <p className="text-steel-grey text-sm mb-4">Download detailed specifications for all products</p>
+              <p className="text-slate-700 text-sm mb-4">Download detailed specifications for all products</p>
               <a href="#" className="btn-secondary text-sm inline-block">Download</a>
             </div>
-            <div className="card-shadow bg-white p-6 border border-slate-200 text-center">
+            <div className="card-base p-6 text-center hover:shadow-lg">
               <div className="text-4xl mb-3">🔍</div>
               <h3 className="text-navy font-bold mb-2">Material Properties</h3>
-              <p className="text-steel-grey text-sm mb-4">Technical data on composites and metal materials</p>
+              <p className="text-slate-700 text-sm mb-4">Technical data on composites and metal materials</p>
               <a href="#" className="btn-secondary text-sm inline-block">View Data</a>
             </div>
-            <div className="card-shadow bg-white p-6 border border-slate-200 text-center">
+            <div className="card-base p-6 text-center hover:shadow-lg">
               <div className="text-4xl mb-3">📋</div>
               <h3 className="text-navy font-bold mb-2">Certifications</h3>
-              <p className="text-steel-grey text-sm mb-4">ISO, aerospace, and defence certifications</p>
+              <p className="text-slate-700 text-sm mb-4">ISO, aerospace, and defence certifications</p>
               <a href="#" className="btn-secondary text-sm inline-block">Access</a>
             </div>
-            <div className="card-shadow bg-white p-6 border border-slate-200 text-center">
+            <div className="card-base p-6 text-center hover:shadow-lg">
               <div className="text-4xl mb-3">📞</div>
               <h3 className="text-navy font-bold mb-2">Technical Support</h3>
-              <p className="text-steel-grey text-sm mb-4">Get expert advice on product selection</p>
+              <p className="text-slate-700 text-sm mb-4">Get expert advice on product selection</p>
               <Link href="/contact" className="btn-secondary text-sm inline-block">Contact Us</Link>
             </div>
           </div>
@@ -242,7 +256,7 @@ export default function Products() {
         primaryBtnHref="/contact"
         secondaryBtnText="Schedule a Call"
         secondaryBtnHref="/contact"
-        backgroundColor="navy"
+        backgroundColor="white"
       />
     </div>
   );

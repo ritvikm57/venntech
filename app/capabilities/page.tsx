@@ -149,25 +149,33 @@ export default function Capabilities() {
   return (
     <div className="w-full">
       {/* Hero */}
-      <section className="bg-navy text-white section-padding">
+      <section className="bg-white section-padding-lg border-b border-gray-200">
         <div className="container-venn">
-          <h1 className="text-white mb-6">Engineering Capabilities</h1>
-          <p className="text-xl text-slate-200 max-w-3xl">
+          <div className="inline-block mb-6 px-4 py-2 bg-orange/10 rounded-full">
+            <p className="text-orange font-bold text-sm uppercase tracking-wide">Technical Expertise</p>
+          </div>
+          <h1 className="text-navy mb-6">Engineering Capabilities</h1>
+          <p className="text-xl text-slate-700 max-w-3xl leading-relaxed">
             Advanced manufacturing and engineering expertise spanning composite fabrication, HVAC system design, and custom solutions for defence-grade applications.
           </p>
         </div>
       </section>
 
       {/* Core Capabilities Grid */}
-      <section className="bg-white section-padding border-b border-slate-200">
+      <section className="bg-gray-50 section-padding border-b border-gray-200">
         <div className="container-venn">
-          <h2 className="text-center text-navy mb-12">Our Capabilities</h2>
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-teal/10 rounded-full">
+              <p className="text-teal font-bold text-sm uppercase tracking-wide">What We Do</p>
+            </div>
+            <h2 className="text-navy">Our Capabilities</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {capabilities.map((capability, idx) => (
-              <div key={idx} className="card-shadow border border-slate-200 rounded-lg p-8 bg-white">
+              <div key={idx} className="card-base p-8">
                 <div className="text-5xl mb-4">{capability.icon}</div>
                 <h3 className="text-navy font-bold mb-2">{capability.title}</h3>
-                <p className="text-steel-grey text-sm mb-4">{capability.description}</p>
+                <p className="text-slate-700 text-sm mb-4">{capability.description}</p>
                 <ul className="space-y-2">
                   {capability.details.map((detail, detailIdx) => (
                     <li key={detailIdx} className="flex items-start space-x-2 text-sm">
@@ -183,19 +191,24 @@ export default function Capabilities() {
       </section>
 
       {/* Manufacturing Process */}
-      <section className="bg-light-grey section-padding border-b border-slate-200">
+      <section className="bg-white section-padding border-b border-gray-200">
         <div className="container-venn">
-          <h2 className="text-center text-navy mb-12">Our Engineering Process</h2>
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-orange/10 rounded-full">
+              <p className="text-orange font-bold text-sm uppercase tracking-wide">Process</p>
+            </div>
+            <h2 className="text-navy">Our Engineering Process</h2>
+          </div>
           
           {/* Process Flow Diagram */}
           <div className="mb-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-2">
               {manufacturingProcess.map((process, idx) => (
                 <div key={process.step} className="flex flex-col">
-                  <div className="bg-white rounded-lg border-2 border-navy p-4 md:p-6 text-center card-shadow">
+                  <div className="card-base rounded-lg border-2 p-4 md:p-6 text-center">
                     <div className="text-3xl font-bold text-teal mb-2">{process.step}</div>
                     <h4 className="text-navy font-bold text-sm md:text-base mb-2">{process.title}</h4>
-                    <p className="text-steel-grey text-xs md:text-sm">{process.description}</p>
+                    <p className="text-slate-700 text-xs md:text-sm">{process.description}</p>
                   </div>
                   {idx < manufacturingProcess.length - 1 && (
                     <div className="hidden md:flex justify-center my-2">
@@ -213,7 +226,7 @@ export default function Capabilities() {
           </div>
 
           {/* Process Description */}
-          <div className="bg-white rounded-lg border border-slate-200 p-8 md:p-12">
+          <div className="card-base rounded-lg p-8 md:p-12">
             <h3 className="text-navy font-bold mb-4">Phase-by-Phase Approach</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-700">
               <div>
@@ -232,12 +245,12 @@ export default function Capabilities() {
       </section>
 
       {/* Testing & Quality */}
-      <section className="bg-white section-padding border-b border-slate-200">
+      <section className="bg-gray-50 section-padding border-b border-gray-200">
         <div className="container-venn">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-navy mb-6">Testing & Quality Assurance</h2>
-              <p className="text-steel-grey text-lg leading-relaxed mb-6">
+              <p className="text-slate-700 text-lg leading-relaxed mb-6">
                 Every component undergoes comprehensive testing to ensure it meets defence-grade standards and performs reliably in its intended application.
               </p>
               <div className="grid grid-cols-2 gap-4">
@@ -248,7 +261,7 @@ export default function Capabilities() {
                   </div>
                 ))}
               </div>
-              <p className="text-steel-grey text-sm mt-6">All testing is documented and traced, providing full traceability and certification for regulatory compliance.</p>
+              <p className="text-slate-700 text-sm mt-6">All testing is documented and traced, providing full traceability and certification for regulatory compliance.</p>
             </div>
             <div>
               <ImagePlaceholder type="industry" />
@@ -258,10 +271,15 @@ export default function Capabilities() {
       </section>
 
       {/* Certifications & Standards */}
-      <section className="bg-light-grey section-padding border-b border-slate-200">
+      <section className="bg-white section-padding border-b border-gray-200">
         <div className="container-venn">
-          <h2 className="text-center text-navy mb-12">Certifications & Standards</h2>
-          <div className="max-w-2xl mx-auto bg-white rounded-lg border border-slate-200 p-8">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-teal/10 rounded-full">
+              <p className="text-teal font-bold text-sm uppercase tracking-wide">Certifications</p>
+            </div>
+            <h2 className="text-navy">Certifications & Standards</h2>
+          </div>
+          <div className="max-w-2xl mx-auto card-base p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {certifications.map((cert, idx) => (
                 <div key={idx} className="flex items-start space-x-3">
@@ -275,24 +293,29 @@ export default function Capabilities() {
       </section>
 
       {/* Future Capabilities */}
-      <section className="bg-white section-padding border-b border-slate-200">
+      <section className="bg-gray-50 section-padding border-b border-gray-200">
         <div className="container-venn">
-          <h2 className="text-center text-navy mb-12">Investing in Tomorrow</h2>
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-orange/10 rounded-full">
+              <p className="text-orange font-bold text-sm uppercase tracking-wide">Innovation</p>
+            </div>
+            <h2 className="text-navy">Investing in Tomorrow</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="card-shadow border border-slate-200 p-8 rounded-lg">
+            <div className="card-base p-8">
               <div className="text-4xl mb-3">🔬</div>
               <h3 className="text-navy font-bold mb-2">R&D Initiatives</h3>
-              <p className="text-steel-grey">Continuous investment in next-generation materials and manufacturing techniques.</p>
+              <p className="text-slate-700">Continuous investment in next-generation materials and manufacturing techniques.</p>
             </div>
-            <div className="card-shadow border border-slate-200 p-8 rounded-lg">
+            <div className="card-base p-8">
               <div className="text-4xl mb-3">🌱</div>
               <h3 className="text-navy font-bold mb-2">Sustainability</h3>
-              <p className="text-steel-grey">Developing eco-friendly composites and minimizing manufacturing waste.</p>
+              <p className="text-slate-700">Developing eco-friendly composites and minimizing manufacturing waste.</p>
             </div>
-            <div className="card-shadow border border-slate-200 p-8 rounded-lg">
+            <div className="card-base p-8">
               <div className="text-4xl mb-3">⚡</div>
               <h3 className="text-navy font-bold mb-2">Digital Integration</h3>
-              <p className="text-steel-grey">IoT and data analytics for predictive maintenance and performance optimization.</p>
+              <p className="text-slate-700">IoT and data analytics for predictive maintenance and performance optimization.</p>
             </div>
           </div>
         </div>
@@ -306,7 +329,7 @@ export default function Capabilities() {
         primaryBtnHref="/contact"
         secondaryBtnText="View Products"
         secondaryBtnHref="/products"
-        backgroundColor="navy"
+        backgroundColor="white"
       />
     </div>
   );

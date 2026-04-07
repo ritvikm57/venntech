@@ -89,33 +89,36 @@ export default function Industries() {
   return (
     <div className="w-full">
       {/* Hero */}
-      <section className="bg-navy text-white section-padding">
+      <section className="bg-white section-padding-lg border-b border-gray-200">
         <div className="container-venn">
-          <h1 className="text-white mb-6">Industries We Serve</h1>
-          <p className="text-xl text-slate-200 max-w-3xl">
+          <div className="inline-block mb-6 px-4 py-2 bg-teal/10 rounded-full">
+            <p className="text-teal font-bold text-sm uppercase tracking-wide">Sector Solutions</p>
+          </div>
+          <h1 className="text-navy mb-6">Industries We Serve</h1>
+          <p className="text-xl text-slate-700 max-w-3xl leading-relaxed">
             Custom-engineered composite and HVAC solutions tailored to the unique demands of defence, aerospace, railways, oil & gas, and heavy industries.
           </p>
         </div>
       </section>
 
       {/* Industries Grid */}
-      <section className="bg-white section-padding border-b border-slate-200">
+      <section className="section-padding border-b border-gray-200">
         <div className="container-venn">
           <div className="space-y-16">
             {industries.map((industry, idx) => (
-              <div key={industry.id}>
+              <div key={industry.id} className={idx % 2 === 0 ? 'bg-white p-8 rounded-lg' : 'bg-gray-50 p-8 rounded-lg'}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div className={idx % 2 === 0 ? '' : 'lg:order-2'}>
                     <div className="text-6xl mb-4">{industry.icon}</div>
                     <h2 className="text-navy mb-4">{industry.name}</h2>
-                    <p className="text-steel-grey text-lg leading-relaxed mb-6">{industry.overview}</p>
+                    <p className="text-slate-700 text-lg leading-relaxed mb-6">{industry.overview}</p>
                     
                     <h3 className="text-navy font-bold mb-4">Key Applications</h3>
                     <ul className="space-y-2 mb-8">
                       {industry.applications.map((app, appIdx) => (
                         <li key={appIdx} className="flex items-start space-x-3">
                           <span className="text-teal text-lg flex-shrink-0">•</span>
-                          <span className="text-steel-grey">{app}</span>
+                          <span className="text-slate-700">{app}</span>
                         </li>
                       ))}
                     </ul>
@@ -135,22 +138,20 @@ export default function Industries() {
                 </div>
 
                 {/* Relevant Products */}
-                <div className="mt-8 pt-8 border-t border-slate-200">
+                <div className="mt-8 pt-8 border-t border-gray-200">
                   <h4 className="text-navy font-bold mb-4">Relevant Solutions</h4>
                   <div className="flex flex-wrap gap-2">
                     {industry.productNames.map((product, prodIdx) => (
                       <Link
                         key={prodIdx}
                         href="/products"
-                        className="inline-block px-4 py-2 bg-light-grey text-slate-700 rounded-full text-sm hover:bg-teal hover:text-white transition-colors"
+                        className="inline-block px-4 py-2 bg-gray-200 text-slate-700 rounded-full text-sm hover:bg-teal hover:text-white transition-colors"
                       >
                         {product}
                       </Link>
                     ))}
                   </div>
                 </div>
-
-                {idx < industries.length - 1 && <hr className="mt-12" />}
               </div>
             ))}
           </div>
@@ -158,53 +159,63 @@ export default function Industries() {
       </section>
 
       {/* Why Choose Venntech for Your Industry */}
-      <section className="bg-light-grey section-padding border-b border-slate-200">
+      <section className="bg-white section-padding border-b border-gray-200">
         <div className="container-venn">
-          <h2 className="text-center text-navy mb-12">Why Choose Venntech for Your Industry</h2>
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-orange/10 rounded-full">
+              <p className="text-orange font-bold text-sm uppercase tracking-wide">Why Venntech</p>
+            </div>
+            <h2 className="text-navy">Why Choose Venntech for Your Industry</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="card-shadow bg-white p-6 border border-slate-200 rounded-lg">
+            <div className="card-base p-6">
               <div className="text-4xl mb-3">🎯</div>
               <h3 className="text-navy font-bold mb-2">Sector Expertise</h3>
-              <p className="text-steel-grey text-sm">16+ years of industry-specific knowledge and proven applications.</p>
+              <p className="text-slate-700 text-sm">16+ years of industry-specific knowledge and proven applications.</p>
             </div>
-            <div className="card-shadow bg-white p-6 border border-slate-200 rounded-lg">
+            <div className="card-base p-6">
               <div className="text-4xl mb-3">⚙️</div>
               <h3 className="text-navy font-bold mb-2">Custom Solutions</h3>
-              <p className="text-steel-grey text-sm">Engineered to your specific application and environmental requirements.</p>
+              <p className="text-slate-700 text-sm">Engineered to your specific application and environmental requirements.</p>
             </div>
-            <div className="card-shadow bg-white p-6 border border-slate-200 rounded-lg">
+            <div className="card-base p-6">
               <div className="text-4xl mb-3">✅</div>
               <h3 className="text-navy font-bold mb-2">Standards Compliance</h3>
-              <p className="text-steel-grey text-sm">ISO, AS9100, defence certifications, and international quality benchmarks.</p>
+              <p className="text-slate-700 text-sm">ISO, AS9100, defence certifications, and international quality benchmarks.</p>
             </div>
-            <div className="card-shadow bg-white p-6 border border-slate-200 rounded-lg">
+            <div className="card-base p-6">
               <div className="text-4xl mb-3">🔧</div>
               <h3 className="text-navy font-bold mb-2">Technical Support</h3>
-              <p className="text-steel-grey text-sm">Expert guidance from design through deployment and after-sales support.</p>
+              <p className="text-slate-700 text-sm">Expert guidance from design through deployment and after-sales support.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Case Study / Success */}
-      <section className="bg-white section-padding border-b border-slate-200">
+      <section className="bg-gray-50 section-padding border-b border-gray-200">
         <div className="container-venn">
-          <h2 className="text-center text-navy mb-12">Our Track Record</h2>
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-orange/10 rounded-full">
+              <p className="text-orange font-bold text-sm uppercase tracking-wide">Track Record</p>
+            </div>
+            <h2 className="text-navy">Our Track Record</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-orange-600 mb-2">#1</div>
-              <p className="text-steel-grey font-semibold mb-1">Defence Sector Trust</p>
-              <p className="text-slate-600 text-sm">16+ years of proven reliability in mission-critical defence applications</p>
+              <div className="text-5xl font-bold text-orange mb-2">#1</div>
+              <p className="text-slate-700 font-semibold mb-1">Defence Sector Trust</p>
+              <p className="text-slate-700 text-sm">16+ years of proven reliability in mission-critical defence applications</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-orange-600 mb-2">500+</div>
-              <p className="text-steel-grey font-semibold mb-1">Successful Projects</p>
-              <p className="text-slate-600 text-sm">Across defence, aerospace, railways, oil & gas, and industrial sectors</p>
+              <div className="text-5xl font-bold text-orange mb-2">500+</div>
+              <p className="text-slate-700 font-semibold mb-1">Successful Projects</p>
+              <p className="text-slate-700 text-sm">Across defence, aerospace, railways, oil & gas, and industrial sectors</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-orange-600 mb-2">30+</div>
-              <p className="text-steel-grey font-semibold mb-1">Countries Served</p>
-              <p className="text-slate-600 text-sm">Global export presence with international quality certifications</p>
+              <div className="text-5xl font-bold text-orange mb-2">30+</div>
+              <p className="text-slate-700 font-semibold mb-1">Countries Served</p>
+              <p className="text-slate-700 text-sm">Global export presence with international quality certifications</p>
             </div>
           </div>
         </div>
@@ -218,7 +229,7 @@ export default function Industries() {
         primaryBtnHref="/contact"
         secondaryBtnText="View All Products"
         secondaryBtnHref="/products"
-        backgroundColor="navy"
+        backgroundColor="white"
       />
     </div>
   );
