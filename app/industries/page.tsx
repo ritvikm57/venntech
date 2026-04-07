@@ -11,7 +11,7 @@ const industries = [
   {
     id: 1,
     name: 'Defence & Naval Systems',
-    icon: '⚓',
+    icon: null,
     overview: 'Over 16 years of defence-sector credibility with proven reliability in mission-critical applications.',
     applications: [
       'Naval vessel HVAC and air treatment systems',
@@ -26,7 +26,7 @@ const industries = [
   {
     id: 2,
     name: 'Aerospace',
-    icon: '✈️',
+    icon: null,
     overview: 'Engineered solutions meeting AS9100 aerospace quality standards with precision manufacturing capabilities.',
     applications: [
       'Aircraft environmental control systems',
@@ -41,7 +41,7 @@ const industries = [
   {
     id: 3,
     name: 'Railways & Infrastructure',
-    icon: '🚂',
+    icon: null,
     overview: 'Robust systems for high-vibration, temperature-variable environments in modern rail and transit systems.',
     applications: [
       'Locomotive cooling and air treatment',
@@ -56,7 +56,7 @@ const industries = [
   {
     id: 4,
     name: 'Oil & Gas',
-    icon: '⛽',
+    icon: null,
     overview: 'Corrosion and pressure-resistant equipment for offshore platforms, refineries, and processing facilities.',
     applications: [
       'Offshore platform HVAC systems',
@@ -71,7 +71,7 @@ const industries = [
   {
     id: 5,
     name: 'Cement & Heavy Industries',
-    icon: '🏭',
+    icon: null,
     overview: 'Durable, maintenance-efficient systems for high-dust, abrasive, and extreme-temperature industrial environments.',
     applications: [
       'Cement kiln cooling and ventilation',
@@ -109,7 +109,6 @@ export default function Industries() {
               <div key={industry.id} className={idx % 2 === 0 ? 'bg-white p-8 rounded-lg' : 'bg-gray-50 p-8 rounded-lg'}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div className={idx % 2 === 0 ? '' : 'lg:order-2'}>
-                    <div className="text-6xl mb-4">{industry.icon}</div>
                     <h2 className="text-navy mb-4">{industry.name}</h2>
                     <p className="text-slate-700 text-lg leading-relaxed mb-6">{industry.overview}</p>
                     

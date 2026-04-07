@@ -178,21 +178,18 @@ export default function Products() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start space-x-3">
-                  <span className="text-teal text-2xl flex-shrink-0">✓</span>
                   <div>
                     <p className="text-slate-900 font-semibold">Design & Development</p>
                     <p className="text-slate-700 text-sm">CAD modeling, FEA analysis, and prototype validation</p>
                   </div>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-teal text-2xl flex-shrink-0">✓</span>
                   <div>
                     <p className="text-slate-900 font-semibold">Material Selection</p>
                     <p className="text-slate-700 text-sm">Expert guidance on composites, metals, and coatings for your environment</p>
                   </div>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-teal text-2xl flex-shrink-0">✓</span>
                   <div>
                     <p className="text-slate-900 font-semibold">Testing & Certification</p>
                     <p className="text-slate-700 text-sm">Full compliance testing and documentation for defence and aerospace standards</p>
@@ -221,25 +218,21 @@ export default function Products() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="card-base p-6 text-center hover:shadow-lg">
-              <div className="text-4xl mb-3">📄</div>
               <h3 className="text-navy font-bold mb-2">Product Datasheets</h3>
               <p className="text-slate-700 text-sm mb-4">Download detailed specifications for all products</p>
               <a href="#" className="btn-secondary text-sm inline-block">Download</a>
             </div>
             <div className="card-base p-6 text-center hover:shadow-lg">
-              <div className="text-4xl mb-3">🔍</div>
               <h3 className="text-navy font-bold mb-2">Material Properties</h3>
               <p className="text-slate-700 text-sm mb-4">Technical data on composites and metal materials</p>
               <a href="#" className="btn-secondary text-sm inline-block">View Data</a>
             </div>
             <div className="card-base p-6 text-center hover:shadow-lg">
-              <div className="text-4xl mb-3">📋</div>
               <h3 className="text-navy font-bold mb-2">Certifications</h3>
               <p className="text-slate-700 text-sm mb-4">ISO, aerospace, and defence certifications</p>
               <a href="#" className="btn-secondary text-sm inline-block">Access</a>
             </div>
             <div className="card-base p-6 text-center hover:shadow-lg">
-              <div className="text-4xl mb-3">📞</div>
               <h3 className="text-navy font-bold mb-2">Technical Support</h3>
               <p className="text-slate-700 text-sm mb-4">Get expert advice on product selection</p>
               <Link href="/contact" className="btn-secondary text-sm inline-block">Contact Us</Link>

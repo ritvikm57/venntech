@@ -10,17 +10,17 @@ export const metadata = {
 export default function About() {
   const values = [
     {
-      icon: '🎯',
+      icon: null,
       title: 'Engineering-First',
       description: 'Innovation and technical excellence drive every decision and product development.',
     },
     {
-      icon: '🏆',
+      icon: null,
       title: 'Quality & Trust',
       description: 'Defence-grade standards and rigorous quality assurance in every component.',
     },
     {
-      icon: '🌍',
+      icon: null,
       title: 'Global Vision',
       description: 'Building world-class manufacturing with international standards and export readiness.',
     },
@@ -90,7 +90,6 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, idx) => (
               <div key={idx} className="card-base p-8">
-                <div className="text-5xl mb-4">{value.icon}</div>
                 <h3 className="text-navy font-bold mb-3">{value.title}</h3>
                 <p className="text-slate-700">{value.description}</p>
               </div>
@@ -150,7 +149,6 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {certifications.map((cert, idx) => (
                 <div key={idx} className="flex items-start space-x-3">
-                  <span className="text-teal text-2xl flex-shrink-0">✓</span>
                   <span className="text-slate-700 font-medium">{cert}</span>
                 </div>
               ))}

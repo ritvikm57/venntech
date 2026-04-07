@@ -30,7 +30,7 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="lg:col-span-1 space-y-8">
               <div className="card-base p-6 rounded-lg">
-                <h3 className="text-navy font-bold mb-3">📍 Headquarters</h3>
+                <h3 className="text-navy font-bold mb-3">Headquarters</h3>
                 <p className="text-slate-700 text-sm leading-relaxed">
                   Venntech Private Limited<br />
                   Bangalore, Karnataka<br />
@@ -39,7 +39,7 @@ export default function Contact() {
               </div>
 
               <div className="card-base p-6 rounded-lg">
-                <h3 className="text-navy font-bold mb-3">📧 Email</h3>
+                <h3 className="text-navy font-bold mb-3">Email</h3>
                 <p className="text-sm">
                   <a href="mailto:info@venntech.com" className="text-teal hover:underline">
                     info@venntech.com
@@ -54,7 +54,7 @@ export default function Contact() {
               </div>
 
               <div className="card-base p-6 rounded-lg">
-                <h3 className="text-navy font-bold mb-3">📞 Phone</h3>
+                <h3 className="text-navy font-bold mb-3">Phone</h3>
                 <p className="text-sm">
                   <a href="tel:+919876543210" className="text-teal hover:underline">
                     +91 98765 43210
@@ -122,7 +122,6 @@ export default function Contact() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="card-base p-6 text-center">
-              <div className="text-4xl mb-3">📞</div>
               <h3 className="text-navy font-bold mb-2">Sales Inquiry</h3>
               <p className="text-slate-700 text-sm mb-3">
                 <a href="mailto:sales@venntech.com" className="text-teal hover:underline">
@@ -133,7 +132,6 @@ export default function Contact() {
             </div>
 
             <div className="card-base p-6 text-center">
-              <div className="text-4xl mb-3">🔧</div>
               <h3 className="text-navy font-bold mb-2">Technical Support</h3>
               <p className="text-slate-700 text-sm mb-3">
                 <a href="mailto:support@venntech.com" className="text-teal hover:underline">
@@ -144,7 +142,6 @@ export default function Contact() {
             </div>
 
             <div className="card-base p-6 text-center">
-              <div className="text-4xl mb-3">🤝</div>
               <h3 className="text-navy font-bold mb-2">Partnerships</h3>
               <p className="text-slate-700 text-sm mb-3">
                 <a href="mailto:partnerships@venntech.com" className="text-teal hover:underline">
@@ -155,7 +152,6 @@ export default function Contact() {
             </div>
 
             <div className="card-base p-6 text-center">
-              <div className="text-4xl mb-3">💼</div>
               <h3 className="text-navy font-bold mb-2">Careers</h3>
               <p className="text-slate-700 text-sm mb-3">
                 <a href="mailto:careers@venntech.com" className="text-teal hover:underline">

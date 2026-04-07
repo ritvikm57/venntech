@@ -2,11 +2,11 @@
 
 **Project**: Production-grade Next.js website for Venntech Private Limited  
 **Client**: Venntech Engineering (Advanced Composites & HVAC Manufacturing)  
-**Status**: ✅ Production Ready | Last Updated: April 7, 2026
+**Status**: Production Ready | Last Updated: April 7, 2026
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 1. [Project Overview](#project-overview)
 2. [Build Status](#build-status)
 3. [Architecture](#architecture)
@@ -24,7 +24,7 @@
 Venntech's digital presence is a modern, high-performance website showcasing 16+ years of expertise in advanced composites and HVAC engineering for defence, aerospace, and industrial sectors.
 
 **Scope:**
-- 8 production pages (incl. 404 fallback)
+- 7 production pages (incl. 404 fallback)
 - 5 reusable React components
 - Full TypeScript implementation
 - Mobile-responsive design
@@ -35,12 +35,12 @@ Venntech's digital presence is a modern, high-performance website showcasing 16+
 
 | Component | Status |
 |-----------|--------|
-| **Build Status** | ✅ Successful (0 errors, 0 warnings) |
-| **Deployment** | ✅ Static Site Generation (SSG) |
-| **TypeScript** | ✅ Type-safe throughout |
-| **Responsive Design** | ✅ Mobile-first (3 breakpoints) |
-| **Performance** | ✅ Optimized for production |
-| **Page Prerendering** | ✅ 10/10 pages (100%) |
+| **Build Status** | Successful (0 errors, 0 warnings) |
+| **Deployment** | Static Site Generation (SSG) |
+| **TypeScript** | Type-safe throughout |
+| **Responsive Design** | Mobile-first (3 breakpoints) |
+| **Performance** | Optimized for production |
+| **Page Prerendering** | 7/7 pages (100%) |
 
 ---
 
@@ -60,8 +60,6 @@ app/
 │   └── page.tsx            # Sectoral solutions (5 industries)
 ├── capabilities/
 │   └── page.tsx            # Engineering processes & certifications
-├── global-presence/
-│   └── page.tsx            # Export capabilities & partnerships
 ├── contact/
 │   └── page.tsx            # RFQ form & support information
 └── components/
@@ -201,17 +199,6 @@ app/
 - **Testing Capabilities** - 8 test types with descriptions
 - **Certifications** - ISO 9001, ISO 14001, AS9100, Defence Export Approved, NADCAP, and more
 - **Future Investments** - R&D expansion, sustainability initiatives, digital integration
-
-### Global Presence (`/global-presence`)
-
-**Purpose**: International reach and export capabilities  
-**Key Content**:
-- **5 Regional Hubs** - South Asia, Middle East, Southeast Asia, Europe, Americas
-- **Manufacturing Hub** - Bangalore headquarters overview and capabilities
-- **Export Readiness** - 4 capability areas with certifications
-- **International Standards** - 8 compliance standards
-- **Strategic Partnerships** - OEM collaborations, distributor networks, technology licensing
-- **Export Story** - Growth trajectory and market reach (30+ countries)
 
 ### Contact (`/contact`)
 
@@ -608,12 +595,12 @@ COMPANY_EMAIL=contact@venntech.com
 ## Summary
 
 **Venntech's website is a production-grade digital asset** featuring:
-- ✅ Professional dark navy design system
-- ✅ Mobile-responsive across all devices
-- ✅ High-performance static site generation
-- ✅ SEO-optimized structure
-- ✅ Functional lead-capture forms
-- ✅ Full TypeScript type safety
+- Professional dark navy design system
+- Mobile-responsive across all devices
+- High-performance static site generation
+- SEO-optimized structure
+- Functional lead-capture forms
+- Full TypeScript type safety
 
 **Status**: Ready for development team handoff, production deployment, or further customization.
 
@@ -622,4 +609,4 @@ COMPANY_EMAIL=contact@venntech.com
 **Document Version**: 2.0  
 **Last Updated**: April 7, 2026  
 **Maintained By**: Development Team  
-**Status**: Production Ready ✅
+**Status**: Production Ready

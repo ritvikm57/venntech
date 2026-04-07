@@ -10,7 +10,7 @@ export const metadata = {
 export default function Capabilities() {
   const capabilities = [
     {
-      icon: '🔧',
+      icon: null,
       title: 'Composite Fabrication',
       description: 'Advanced FRP and composite manufacturing using hand lay-up, infusion, and compression molding techniques.',
       details: [
@@ -22,7 +22,7 @@ export default function Capabilities() {
       ],
     },
     {
-      icon: '❄️',
+      icon: null,
       title: 'HVAC System Design',
       description: 'CAD-driven design of air treatment, cooling, and filtration systems optimized for application requirements.',
       details: [
@@ -34,7 +34,7 @@ export default function Capabilities() {
       ],
     },
     {
-      icon: '⚙️',
+      icon: null,
       title: 'Custom Engineering',
       description: 'End-to-end custom design and manufacturing tailored to unique application challenges and specifications.',
       details: [
@@ -46,7 +46,7 @@ export default function Capabilities() {
       ],
     },
     {
-      icon: '🛡️',
+      icon: null,
       title: 'Corrosion Resistance',
       description: 'Advanced materials and surface treatments for extended equipment lifespan in harsh environments.',
       details: [
@@ -58,7 +58,7 @@ export default function Capabilities() {
       ],
     },
     {
-      icon: '📈',
+      icon: null,
       title: 'Scalable Manufacturing',
       description: 'State-of-the-art facilities capable of handling both prototype and large-scale production efficiently.',
       details: [
@@ -70,7 +70,7 @@ export default function Capabilities() {
       ],
     },
     {
-      icon: '✅',
+      icon: null,
       title: 'Quality Assurance',
       description: 'Rigorous testing and validation ensuring defence-grade quality standards on every component.',
       details: [
@@ -173,13 +173,11 @@ export default function Capabilities() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {capabilities.map((capability, idx) => (
               <div key={idx} className="card-base p-8">
-                <div className="text-5xl mb-4">{capability.icon}</div>
                 <h3 className="text-navy font-bold mb-2">{capability.title}</h3>
                 <p className="text-slate-700 text-sm mb-4">{capability.description}</p>
                 <ul className="space-y-2">
                   {capability.details.map((detail, detailIdx) => (
                     <li key={detailIdx} className="flex items-start space-x-2 text-sm">
-                      <span className="text-teal flex-shrink-0">✓</span>
                       <span className="text-slate-700">{detail}</span>
                     </li>
                   ))}

@@ -26,7 +26,6 @@ export default function Navbar() {
           <Link href="/products" className="nav-link px-4 py-2 rounded-lg hover:bg-gray-100">Products</Link>
           <Link href="/industries" className="nav-link px-4 py-2 rounded-lg hover:bg-gray-100">Industries</Link>
           <Link href="/capabilities" className="nav-link px-4 py-2 rounded-lg hover:bg-gray-100">Capabilities</Link>
-          <Link href="/global-presence" className="nav-link px-4 py-2 rounded-lg hover:bg-gray-100">Global Presence</Link>
           <Link href="/contact" className="nav-link px-4 py-2 rounded-lg hover:bg-gray-100">Contact</Link>
         </div>
 
@@ -57,7 +56,6 @@ export default function Navbar() {
             <Link href="/products" className="nav-link block px-4 py-3 rounded-lg hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Products</Link>
             <Link href="/industries" className="nav-link block px-4 py-3 rounded-lg hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Industries</Link>
             <Link href="/capabilities" className="nav-link block px-4 py-3 rounded-lg hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Capabilities</Link>
-            <Link href="/global-presence" className="nav-link block px-4 py-3 rounded-lg hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Global Presence</Link>
             <Link href="/contact" className="nav-link block px-4 py-3 rounded-lg hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
             <hr className="my-2 border-t border-gray-200" />
             <Link href="/contact" className="btn-primary block text-center py-3 mx-2" onClick={() => setMobileMenuOpen(false)}>

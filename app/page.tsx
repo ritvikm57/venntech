@@ -4,11 +4,11 @@ import ImagePlaceholder from './components/ImagePlaceholder';
 
 export default function Home() {
   const industries = [
-    { name: 'Defence & Naval', icon: '⚓' },
-    { name: 'Aerospace', icon: '✈️' },
-    { name: 'Railways', icon: '🚂' },
-    { name: 'Oil & Gas', icon: '⛽' },
-    { name: 'Cement & Heavy', icon: '🏭' },
+    { name: 'Defence & Naval', icon: null },
+    { name: 'Aerospace', icon: null },
+    { name: 'Railways', icon: null },
+    { name: 'Oil & Gas', icon: null },
+    { name: 'Cement & Heavy', icon: null },
   ];
 
   const stats = [
@@ -179,43 +179,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Global Presence Preview */}
-      <section className="bg-white section-padding border-b border-gray-200">
-        <div className="container-venn">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <ImagePlaceholder type="industry" />
-            </div>
-            <div>
-              <div className="inline-block mb-4 px-4 py-2 bg-teal/10 rounded-full">
-                <p className="text-teal font-bold text-sm uppercase tracking-wide">Global Reach</p>
-              </div>
-              <h2 className="text-navy mb-6">Worldwide Manufacturing & Export</h2>
-              <p className="text-slate-700 text-lg leading-relaxed mb-6">
-                With manufacturing facilities in India and export-ready certifications, Venntech is scaling its presence across Asia-Pacific, Europe, and the Middle East. Our commitment to international standards ensures seamless integration into global supply chains.
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start space-x-3">
-                  <span className="text-orange text-xl font-bold">✓</span>
-                  <span className="text-slate-700">ISO & International Certifications</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <span className="text-orange text-xl font-bold">✓</span>
-                  <span className="text-slate-700">Defence Export Approved Vendor Status</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <span className="text-orange text-xl font-bold">✓</span>
-                  <span className="text-slate-700">Logistics & Compliance Ready</span>
-                </li>
-              </ul>
-              <Link href="/global-presence" className="btn-secondary">
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Capabilities Preview */}
       <section className="bg-gray-50 section-padding border-b border-gray-200">
         <div className="container-venn">
@@ -227,32 +190,26 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="card-base p-8">
-              <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-navy font-bold mb-3">Composite Fabrication</h3>
               <p className="text-slate-600 text-sm">Advanced FRP and composite manufacturing with precision tolerances for aerospace and defence applications.</p>
             </div>
             <div className="card-base p-8">
-              <div className="text-4xl mb-4">❄️</div>
               <h3 className="text-navy font-bold mb-3">HVAC System Design</h3>
               <p className="text-slate-600 text-sm">Custom air treatment, cooling, and filtration systems engineered for demanding industrial environments.</p>
             </div>
             <div className="card-base p-8">
-              <div className="text-4xl mb-4">⚙️</div>
               <h3 className="text-navy font-bold mb-3">Custom Engineering</h3>
               <p className="text-slate-600 text-sm">Bespoke design and manufacturing solutions tailored to unique application requirements and specifications.</p>
             </div>
             <div className="card-base p-8">
-              <div className="text-4xl mb-4">🛡️</div>
               <h3 className="text-navy font-bold mb-3">Corrosion Resistance</h3>
               <p className="text-slate-600 text-sm">Advanced materials and coatings for extended equipment lifespan in harsh marine and industrial environments.</p>
             </div>
             <div className="card-base p-8">
-              <div className="text-4xl mb-4">📈</div>
               <h3 className="text-navy font-bold mb-3">Scalable Production</h3>
               <p className="text-slate-600 text-sm">State-of-the-art manufacturing facilities capable of handling both prototype and large-scale production runs.</p>
             </div>
             <div className="card-base p-8">
-              <div className="text-4xl mb-4">✅</div>
               <h3 className="text-navy font-bold mb-3">Quality Assurance</h3>
               <p className="text-slate-600 text-sm">Rigorous testing and validation protocols ensuring defence-grade quality standards on every component.</p>
             </div>
